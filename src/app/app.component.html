@@ -28,7 +28,7 @@
                 <tr *ngFor="let item of order.Items">
                     <td>{{item.Description}}</td>
                     <td>{{item.Quantity}}</td>
-                    <td>{{item.Price}}</td>
+                    <td>{{item.Price | number:'1.2'}}</td>
                   </tr>
             </tbody>
             <tfoot class="full-width">
@@ -36,11 +36,11 @@
                 <th colspan="3">
                     <span class="large ui blue label">
                         <i class="balance scale icon"></i>
-                        Sales taxes:  {{order.SalesTaxes}}
+                        Sales taxes:  {{order.SalesTaxes | number:'1.2'}}
                     </span>
                     <span class="large ui blue label">
                         <i class="credit card outline icon"></i>
-                        Total:  {{order.Total}}
+                        Total:  {{order.Total | number:'1.2'}}
                     </span>
                 </th>
               </tr>
